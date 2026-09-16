@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+
+# Models (Too large for GitHub)
+models/*.joblib
+models/*.pkl
+
+# IDE
+.vscode/
+.idea/
+*.swp
