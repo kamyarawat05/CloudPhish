@@ -9,6 +9,22 @@ The system is powered by a **Random Forest Classifier** and is strictly designed
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 
 ---
+```mermaid
+graph TD
+    A[1. Client Layer] -->|HTTPS/REST| B[API Gateway]
+    B --> C[2. Feature Extraction Layer]
+    C -->|Numeric Vector| D[3. Model Inference Layer]
+    D -->|Raw Probability| E[4. Response Layer]
+    E -->|JSON Verdict| B
+    B -->|Actionable Response| A
+    
+    subgraph Cloud Environment
+    B
+    C
+    D
+    E
+    end
+```
 
 ## 🏗️ System Architecture
 
